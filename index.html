@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Botão</title>
+    <style>
+        :root{ 
+            --branco-principal:#ffffff; 
+            --ciza-secundario: #C0C0C0; 
+            --botao-azul: #167BF7; 
+            --cor-de-fundo: #CEFC99; 
+        } 
+        
+        body{ 
+            background-color:var(--cor-de-fundo); 
+            color:var(--branco-principal); 
+            margin: 0;
+            font-family: Arial, sans-serif;
+        } 
+        
+        .principal{ 
+            /* background-image: url("Background.png"); */ /* Descomente se tiver a imagem */
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        } 
+        
+        .container{ 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
+        
+        .container_botao{ 
+            background-color:var(--botao-azul); 
+            border-radius: 5px; 
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none; /* Se for um link */
+            font-weight: bold;
+            border: none; /* Se for um button */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .container_botao:hover {
+            background-color: #0b5ab5; /* Efeito ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="principal">
+        <div class="container">
+            <!-- Botão funcionando com alerta -->
+            <button class="container_botao" onclick="clicouBotao()">
+                Clique aqui
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function clicouBotao() {
+            alert('Botão funcional! Você clicou nele.');
+        }
+    </script>
+
+     <div class="container">
+    <h1 class="container__titulo">Com o Combo+, você pode aproveitar o Alura+ e o Alura Língua por um preço único.</h1>
+    <img src="img/Combo.png" alt="O combo+ é a junção do alura+ e o alura língua" class="container__imagem">
+    
+    <!-- Botão Principal -->
+    <a href="https://alura.com.br" class="container__botao">Assinar por 12x de R$ 120,00*</a>
+    
+    <!-- Botão Secundário -->
+    <a href="https://alura.com.br" class="container__botao botao_secundario">Assinar somente o Alura+</a>
+    
+    <p class="container__aviso">*O valor pode variar de acordo com o plano escolhido.</p>
+</div>
+
+
+</body>
+</html>
